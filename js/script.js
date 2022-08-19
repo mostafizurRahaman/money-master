@@ -1,7 +1,7 @@
 function isValid(inputValue){
    if(isNaN(inputValue)){
       alert('Enter a Number please:'); 
-      return 0; 
+     return  0; 
    }else if(inputValue < 0){
       alert("Enter a Positive number"); 
       return 0; 
