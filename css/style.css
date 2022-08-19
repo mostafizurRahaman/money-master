@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600;700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+}
+html{
+   font-size: 65.5%;
+}
+body{
+   font-family: 'Oswald', sans-serif;
+   background: #ddd;
+   max-width: 100%;
+}
+.left-content{
+   width: 50%;
+}
+.right-content{
+   width: 45%;
+}
+h1,h2,h3,h4,h5,h6{
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.flex{
+   display: flex;
+}
+
+input[type="text"]::placeholder{
+   color: #000 ; 
+   opacity: 1;
+}
+button{
+   border: 0;
+}
+h3{
+   margin: 1.5rem 0rem ;
+   text-transform: capitalize;
+}
+
+/* header section style start */
+#header{
+   background: #fff;
+   border-radius: 1rem;
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 1rem;
+   -ms-border-radius: 1rem;
+   -o-border-radius: 1rem;
+   width: 80%;
+   margin: 5rem auto; 
+   padding: 5rem;
+   box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.429);
+}
+.container{
+   justify-content: space-between;
+}
+#hero-text{
+   font-size:4.5rem;
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+#header .left-content img{
+   width: 100%;
+   height: auto;
+   border-radius: 0.5rem;
+   -webkit-border-radius: 0.5rem;
+   -moz-border-radius: 0.5rem;
+   -ms-border-radius: 0.5rem;
+   -o-border-radius: 0.5rem;
+}
+#header h2{
+   font-size: 3rem ;
+   text-align: center;
+   margin-bottom: 1.5rem;  
+}
+label{
+   font-size: 2.5rem;
+   text-transform: capitalize;
+   font-weight: 700;
+   display: flex;
+   justify-content: space-between;
+   margin:2rem 0;
+   
+}
+input[type="text"]{
+   width: 80%;
+   text-transform: capitalize;
+   font-weight: bold;
+   font-size: 1.6rem;
+   border-radius: 0.5rem;
+   -webkit-border-radius: 0.5rem;
+   -moz-border-radius: 0.5rem;
+   -ms-border-radius: 0.5rem;
+   -o-border-radius: 0.5rem;
+   border: 0.1rem solid #000;
+   padding: 0.8rem;
+}
+
+
+#calculate-btn{
+   padding: 1.5rem 0rem;
+   font-size: 2rem;
+   text-transform: uppercase;
+   background: rgb(1, 141, 255);
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   border-radius: 1rem;
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 1rem;
+   -ms-border-radius: 1rem;
+   -o-border-radius: 1rem;
+   width: 20rem;
+   margin: 2rem auto;
+  display: block;
+}
+
+.calculate-total-expense,.saving-calculation{
+   text-align: center;
+   text-transform: capitalize;
+   font-size: 1.8rem;
+}
+
+.saving-part{
+   justify-content: space-between;
+   gap: 1rem;
+   align-items: center;
+}
+.saving-part h3{
+ font-size: 1.8rem;
+}
+#saving-field{
+   width: 50%;
+   padding: 1rem 0.5rem;
+   border: 0.1rem solid #000; 
+   color: #000;
+}
+#save-btn{
+   padding: 1rem 0rem;
+   font-size: 2rem;
+   text-transform: uppercase;
+   background: rgb(1, 141, 255);
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   border-radius: 1rem;
+   -webkit-border-radius: 1rem;
+   -moz-border-radius: 1rem;
+   -ms-border-radius: 1rem;
+   -o-border-radius: 1rem;
+   width: 10rem;
+
+}
