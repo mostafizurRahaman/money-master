@@ -14,14 +14,15 @@ function getInputValue(inputId){
    const inputField = document.getElementById(inputId); 
    const inputFieldValueString = inputField.value ; 
    let inputFieldValue = parseFloat(inputFieldValueString); 
-  return isValid(inputFieldValue)
+   inputField.value = ""; 
+   return inputFieldValue; 
 }
 
 function getElementValue(inputId){
    const element = document.getElementById(inputId); 
    const elementValueString = element.innerText; 
    const elementValue = parseFloat(elementValueString); 
-   return isValid(elementValue)
+  return elementValue; 
    
 }
 
@@ -38,7 +39,14 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
    const foodExpenses = getInputValue('food'); 
    const rentExpenses = getInputValue("rent")
    const clothsExpenses = getInputValue("cloths"); 
-   
+   //validation 
+   if(isNaN(income) || isNaN(foodExpenses) || isNaN(rentExpenses) || isNaN(clothsExpenses)){
+      alert('Please Enter a valid Number:'); 
+      return; 
+   }else if(income <0 ||foodExpenses <0 || rentExpenses < 0 || clothsExpenses <0){
+      alert('Please Enter a Positive Number'); 
+      return; 
+   }
    // totalExpenses 
    const totalExpenses = foodExpenses +rentExpenses + clothsExpenses; 
    if(totalExpenses > income){
@@ -53,11 +61,15 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
 }); 
 
 
+
 document.getElementById('save-btn').addEventListener('click', function(){
    const balance = getElementValue('balance'); 
    let savingPercentage = getInputValue('saving-field'); 
    if(savingPercentage > 100){
       alert("You cannot get discount more then 100%"); 
+      return; 
+   }else if(savingPercentage < 0){
+      alert('Please Enter a positive number: '); 
       return; 
    }
    const savings = balance *(savingPercentage /100); 
