@@ -71,6 +71,9 @@ document.getElementById('save-btn').addEventListener('click', function(){
    }else if(savingPercentage < 0){
       alert('Please Enter a positive number: '); 
       return; 
+   }else if(isNaN(savingPercentage)){
+      alert('Please Enter a valid number: '); 
+      return; 
    }
    const savings = balance *(savingPercentage /100); 
    setElementValue('saving-amount',savings); 
@@ -79,3 +82,6 @@ document.getElementById('save-btn').addEventListener('click', function(){
 }); 
 
 
+document.addEventListener('contextmenu', function(event){
+   event.preventDefault(); 
+},false)
